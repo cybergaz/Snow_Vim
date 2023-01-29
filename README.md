@@ -1,2 +1,5 @@
-# nvim_config
-my neovim configuration , with the support of lsp espesially for React or web dev
+## Snow Vim
+
+my neovim configuration , with the support of lsp and all kind of autocomletions, espesially for React or web dev and easily configurable for other languages too....
+
+keybinds and other guides i'll upload soon , that'll in my todo list...
