@@ -1,4 +1,4 @@
-## Snow Vim
+# Snow Vim
 
 my neovim configuration , with the support of lsp and all kind of autocomletions, espesially for React or web dev and easily configurable for other languages too....
 
