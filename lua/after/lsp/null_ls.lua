@@ -8,6 +8,7 @@ if not setup then
 	return
 end
 
+
 local formatting = null.builtins.formatting
 local diagnostics = null.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

@@ -8,8 +8,7 @@ vim.g.mapleader = " "
 -- format
 -- keymap.set( {mode} , {OnKey} ,{Action} )
 
-keymap.set({ "i", "v" }, "jk", "<ESC>", { silent = true })
---keymap.set({'i','v'}, '<leader>jj','<ESC>',{silent = true})
+keymap.set({ "i" }, "jk", "<ESC>", { silent = true })
 
 -- do not yank with x
 keymap.set("n", "x", '"_x')
@@ -39,26 +38,30 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 
 -- nvim tree file explorer
 keymap.set({ "n" }, "<leader>ee", "<ESC>:NvimTreeToggle<CR>")
-keymap.set({ "i", "n" }, "<C-e>", "<ESC>:NvimTreeToggle<CR>")
+
 
 -- clear sesrch
 keymap.set({ "n" }, "<leader>cls", ":nohlsearch<CR>")
+keymap.set({ "n" }, "<leader>clear", ":nohlsearch<CR>")
 
 -- telescope
 keymap.set({ "n" }, "<leader>ff", ":Telescope find_files<CR>")
 keymap.set({ "n" }, "<leader>fg", ":Telescope live_grep<CR>")
+keymap.set({ "n" }, "<leader>fe", ":Telescope file_browser<CR>")
 
 -- arrow keys disable
-keymap.set({ "i", "n", "v" }, "<Up>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
-keymap.set({ "i", "n", "v" }, "<Down>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
-keymap.set({ "i", "n", "v" }, "<Left>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
-keymap.set({ "i", "n", "v" }, "<Right>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
-keymap.set({ "i", "n", "v" }, "<ESC>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>i')
+-- keymap.set({ "i", "n", "v" }, "<Up>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
+-- keymap.set({ "i", "n", "v" }, "<Down>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
+-- keymap.set({ "i", "n", "v" }, "<Left>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
+-- keymap.set({ "i", "n", "v" }, "<Right>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>')
+-- keymap.set({ "i", "n", "v" }, "<ESC>", '<ESC>:lua print "Na Vro Na , I can\'t let this happen"<CR>i')
 
 -- hop search
-keymap.set({ "i", "n", "v" }, "sf", "<ESC>:HopChar2<CR>")
-keymap.set({ "n" }, "ss", ":HopChar1<CR>")
-keymap.set("n", "S", ":HopAnywhere<CR>")
+keymap.set({ "i" }, "jf", "<ESC>:HopChar2<CR>")
+keymap.set({ "n", "v" }, "sf", "<ESC>:HopChar2<CR>")
+keymap.set({ "i" }, "js", "<ESC>:HopChar1<CR>")
+keymap.set({ "n","v" }, "ss", "<ESC>:HopChar1<CR>")
+
 
 -- operation on selected text
 keymap.set({ "n", "v" }, "mm", ":'<,'>norm ")
@@ -68,3 +71,6 @@ keymap.set({ "n", "v" }, "<space>v", "<C-v>")
 
 -- code formatting using prettier and all
 keymap.set("n", "==", ":lua vim.lsp.buf.format()<CR>")
+
+-- save and sudo mode save
+-- keymap.set("n",":W",":w !sudo tee % /dev/null")

@@ -42,6 +42,7 @@ packer.startup(function(use)
 		tag = "0.1.1",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use({ "nvim-telescope/telescope-file-browser.nvim" })
 
 	-- tabline
 	use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
@@ -50,7 +51,6 @@ packer.startup(function(use)
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
-
 	-- snippets
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
@@ -94,4 +94,10 @@ packer.startup(function(use)
 	-- auto closing
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
+
+	-- undo tree
+	use("mbbill/undotree")
+
+	-- vim surround
+	use("tpope/vim-surround")
 end)

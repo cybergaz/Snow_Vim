@@ -1,5 +1,4 @@
 -- if you wanna add subdirectory imports then use " . " instead of " / "
-
 require("base")
 require("plugins")
 require("maps")
@@ -14,3 +13,4 @@ require("after.lsp.lspconfig")
 require("after.lsp.null_ls")
 require("after.lsp.autoclose")
 require("after.lsp.treesitter")
+require("after.telescope")

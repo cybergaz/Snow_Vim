@@ -1,3 +1,6 @@
+-- souce : https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md 
+
+
 local status1, mason = pcall(require,'mason')
 if not status1 then
     print "some error in mason"

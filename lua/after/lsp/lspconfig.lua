@@ -1,3 +1,5 @@
+-- souce : https://github.com/neovim/nvim-lspconfig 
+-- and : https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md 
 local status1, lspconf = pcall(require, "lspconfig")
 if not status1 then
 	print("something wring with lspconfig")
@@ -55,6 +57,7 @@ typescript.setup({
 	server = {
 		capabilities = cap,
 		on_attach = on_attach,
+        cmd = { "typescript-language-server", "--stdio" }
 	},
 })
 
